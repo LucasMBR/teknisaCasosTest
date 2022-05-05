@@ -22,7 +22,7 @@ public class LoginTests extends TestBase {
         //Parameteres
         String usuario = "lucas.leal@teknisa.com";
         String senha = "Teknisa1.";
-        String mensagemMainPage = "Inicio";
+        String mensagemMainPage = "0002 - FABRICA HELA";
 
         //Test
         loginPage.preenhcerUsuario(usuario);
