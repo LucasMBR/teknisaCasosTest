@@ -12,9 +12,12 @@ public class MainPage extends PageBase {
     //By menuPrincipal = By.id("splash");
     By displayPagamentosVencidos = By.xpath("//span[text() = 'Pagamentos - Vencidos']");
     By menuDocumentosFiscais = By.xpath("//span[text() = 'Documentos Fiscais']");
+    By menuParametrizacao = By.xpath("//span[text() = 'Parametrização']");
     By menuDocumentosFiscais_Saidas = By.xpath("//span[text() = 'Saídas']");
     By menuDocumentosFiscais_Saidas_Lancamentos = By.xpath("//span[text() = 'Lançamentos']");
     By menuDocumentosFiscais_Saidas_Lancamentos_LancamentoDeSaida = By.xpath("//span[text() = 'Lançamento de Saída']");
+    By menuAlmoxarifadoLocalizacao = By.xpath("//span[text() = 'Almoxarifado/Localização']");
+    By menuEstoque = By.xpath("//li[8]//span[text() = 'Estoque'] ");
 
     By loadingWait = By.xpath("//*[@class='zh-background-loading ng-scope']//span[@class='zh-loading-icon']");
 
@@ -45,7 +48,18 @@ public class MainPage extends PageBase {
         click(menuDocumentosFiscais_Saidas_Lancamentos);
     }
 
-    public void clicarEmDocumentosFiscaisSaidasLancamentosLancamentoDeSaida(){
+    public void clicarEmDocumentosFiscaisSaidasLancamentosLancamentoDeSaida() {
         click(menuDocumentosFiscais_Saidas_Lancamentos_LancamentoDeSaida);
+    }
+
+
+    public void clicarEmMenuAlmoxarifadoLocalizacao(){
+        click(menuAlmoxarifadoLocalizacao);
+        }
+    public void clicarEmParametrizacao(){
+        click(menuParametrizacao);
+        }
+    public void clicarEmEstoque(){
+        click(menuEstoque);
     }
 }

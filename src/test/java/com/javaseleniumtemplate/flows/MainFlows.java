@@ -18,4 +18,10 @@ public class MainFlows {
         mainPage.clicarEmDocumentosFiscaisSaidasLancamentos();
         mainPage.clicarEmDocumentosFiscaisSaidasLancamentosLancamentoDeSaida();
     }
+    public void navegarParaAlmoxarifadoLocalizacao(){
+        mainPage.clicarEmMenuPrincipal();
+        mainPage.clicarEmParametrizacao();
+        mainPage.clicarEmEstoque();
+        mainPage.clicarEmMenuAlmoxarifadoLocalizacao();
+    }
 }

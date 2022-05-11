@@ -10,7 +10,7 @@ public class LancamentoSaidaFlows {
     }
 
     public void aplicarFiltro(String status, String unidade, String remetente, String serie){
-        lancamentoSaidaPage.preencherFiltroStatus(status);
+       /* lancamentoSaidaPage.preencherFiltroStatus(status);
         lancamentoSaidaPage.preencherFiltroUnidade(unidade);
         //lancamentoSaidaPage.preencherFiltroEmpresa(empresa);
         lancamentoSaidaPage.preencherFiltroRemetente(remetente);
@@ -21,6 +21,6 @@ public class LancamentoSaidaFlows {
         //lancamentoSaidaPage.preencherFiltroDataSaidaInicial(dataSaidaInicial);
         //lancamentoSaidaPage.preencherFiltroDataSaidaFinal(dataSaidaFinal);
         //lancamentoSaidaPage.preencherFiltroOperacao(operacao);
-        lancamentoSaidaPage.clicarAplicarFiltro();
+        lancamentoSaidaPage.clicarAplicarFiltro();*/
     }
 }

@@ -6,21 +6,21 @@ import org.openqa.selenium.WebElement;
 
 public class LancamentoSaidaPage extends PageBase {
     //Mapping
-    By filtroStatus = By.xpath("//div[@class='col-xs-12 zh-field last-of-row'][1]//li[text() = 'texto']");
-    By filtroStatusAux = By.xpath("//div[@class='col-xs-12 zh-field last-of-row'][1]");
+    //By filtroStatus = By.xpath("//div[@class='col-xs-12 zh-field last-of-row'][1]//li[text() = 'texto']");
+    //By filtroStatusAux = By.xpath("//div[@class='col-xs-12 zh-field last-of-row'][1]");
     By filtroUnidadeAux = By.id("NMFILIAL");
     By filtroUnidade = By.xpath("//*[@id='NMFILIAL']//input");
-    By filtroEmpresa = By.id("NMEMPRESA");
-    By filtroDestRemet = By.xpath("//*[@id='IDORIGDESTNF']/following-sibling::div[1]//li[text() = 'texto']");
-    By getFiltroDestRemetAux = By.xpath("//*[@id='IDORIGDESTNF']/following-sibling::div[1]");
-    By filtroDestinatario = By.id("NMRAZSOCCLIE");
-    By filtroSerie = By.xpath("//*[@id='DSSERIE']//input");
-    By filtroSerieAux = By.id("DSSERIE");
-    By filtroDataEmissaoInicial = By.id("DTEMISSAO_START");
-    By filtroDataEmissaoFinal = By.id("DTEMISSAO_END");
-    By filtroDataSaidaInicial = By.id("DTENTRSAID_START");
-    By filtroDataSaidaFinal = By.id("DTENTRSAID_END");
-    By filtroOperacao = By.id("NMTIPOOPER");
+    //By filtroEmpresa = By.id("NMEMPRESA");
+    //By filtroDestRemet = By.xpath("//*[@id='IDORIGDESTNF']/following-sibling::div[1]//li[text() = 'texto']");
+    //By getFiltroDestRemetAux = By.xpath("//*[@id='IDORIGDESTNF']/following-sibling::div[1]");
+    //By filtroDestinatario = By.id("NMRAZSOCCLIE");
+    //By filtroSerie = By.xpath("//*[@id='DSSERIE']//input");
+    //By filtroSerieAux = By.id("DSSERIE");
+    //By filtroDataEmissaoInicial = By.id("DTEMISSAO_START");
+    //By filtroDataEmissaoFinal = By.id("DTEMISSAO_END");
+    //By filtroDataSaidaInicial = By.id("DTENTRSAID_START");
+    //By filtroDataSaidaFinal = By.id("DTENTRSAID_END");
+    //By filtroOperacao = By.id("NMTIPOOPER");
 
     By filtroAplicarFiltro = By.xpath("//span[text() = 'Aplicar filtro'][1]");
     By filtroFecharFiltro = By.xpath("//span[text() = 'Fechar'][1]");
@@ -64,7 +64,7 @@ public class LancamentoSaidaPage extends PageBase {
 
     By statusLancamento = By.xpath("//div[@class='tr cell1']//div");
 
-    public void preencherFiltroStatus(String status){
+    /*public void preencherFiltroStatus(String status){
         waitForInvisibilityOfElementLocated(loadingWait);
         click(filtroStatusAux);
         clickWithText(filtroStatus,status);
@@ -102,7 +102,7 @@ public class LancamentoSaidaPage extends PageBase {
     }
     public void preencherFiltroOperacao(String operacao){
         sendKeys(filtroOperacao, operacao);
-    }
+    }*/
 
     public void clicarAplicarFiltro(){
         click(filtroAplicarFiltro);

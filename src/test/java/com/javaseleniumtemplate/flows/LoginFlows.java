@@ -15,7 +15,7 @@ public class LoginFlows {
         loginPage.preenhcerUsuario(username);
         loginPage.preencherSenha(password);
         loginPage.clicarEmLogin();
-        //loginPage.aceitarMensagemAlerta();
+        loginPage.aceitarMensagemAlerta();
         //loginPage.aceitarMensagemAlerta2();
     }
 }

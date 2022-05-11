@@ -1,7 +1,8 @@
 package com.javaseleniumtemplate.tests;
 
 import com.javaseleniumtemplate.bases.TestBase;
-import com.javaseleniumtemplate.dbsteps.UsuariosDBSteps;
+import com.javaseleniumtemplate.flows.MainFlows;
+import com.javaseleniumtemplate.pages.AlmoxLocaPage;
 import com.javaseleniumtemplate.pages.LoginPage;
 import com.javaseleniumtemplate.pages.MainPage;
 import org.testng.Assert;
@@ -11,6 +12,8 @@ public class LoginTests extends TestBase {
     //Objects
     LoginPage loginPage;
     MainPage mainPage;
+    MainFlows mainFlows;
+    AlmoxLocaPage almoxaLocaPage;
 
     //Tests
     @Test

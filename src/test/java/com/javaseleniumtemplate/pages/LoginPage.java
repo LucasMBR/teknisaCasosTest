@@ -40,6 +40,7 @@ public class LoginPage extends PageBase {
     }
 
     public String retornaMensagemDeErro(){
+
         return getText(mensagemErroTextArea);
     }
 }
