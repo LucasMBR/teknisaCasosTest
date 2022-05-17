@@ -31,6 +31,7 @@ public class AlmoxLocaTests extends TestBase {
         almoxaLocaPage.preencherFiltroUnidade(unidade);
         almoxaLocaPage.clicarAplicarFiltro();
         almoxaLocaPage.clicarAdicionar();
+        almoxaLocaPage.adicionarCodigo();
 
         Assert.assertTrue(almoxaLocaPage.retornarFilialFiltrada().endsWith(unidade));
 
