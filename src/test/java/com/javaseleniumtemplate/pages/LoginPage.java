@@ -31,6 +31,7 @@ public class LoginPage extends PageBase {
         click(loginButton);
     }
 
+    //Ver possibilidade de condicionar para somente executar quando houver a mensagem para que não falhe testes iniciais.
     public void aceitarMensagemAlerta(){
         click(mensagemAlert);
     }

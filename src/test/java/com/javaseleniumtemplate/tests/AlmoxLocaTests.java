@@ -29,13 +29,17 @@ public class AlmoxLocaTests extends TestBase {
         loginFlows.efetuarLogin(usuario, senha);
         mainFlows.navegarParaAlmoxarifadoLocalizacao();
 
+        //Preenchendo e aplicando Filtro
         almoxaLocaPage.preencherFiltroUnidade(unidade);
         almoxaLocaPage.clicarAplicarFiltro();
+
+        //Realizando rotina
         almoxaLocaPage.clicarAdicionar();
         almoxaLocaPage.adicionarCodigo();
         almoxaLocaPage.adicionarDescricao(descricao);
         almoxaLocaPage.clicarSalvar();
 
+        //Assegurando que o teste finalizou com sucesso.
         Assert.assertTrue(almoxaLocaPage.retornarFilialFiltrada().endsWith(unidade));
         Assert.assertEquals(almoxaLocaPage.confirmacaoCadastroSucesso(), almoxaLocaPage.numeroGerado());
     }
