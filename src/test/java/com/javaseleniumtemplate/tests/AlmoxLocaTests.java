@@ -14,7 +14,7 @@ public class AlmoxLocaTests extends TestBase {
     AlmoxLocaPage almoxaLocaPage;
 
     @Test
-    public void almoxarifadoLocalizacaoTest(){
+    public void almoxarifadoLocalizacaoTest() {
 
         loginFlows = new LoginFlows();
         mainFlows = new MainFlows();
@@ -24,6 +24,7 @@ public class AlmoxLocaTests extends TestBase {
         String usuario = "lucas.leal@teknisa.com";
         String senha = "Teknisa1.";
         String unidade = "HELA INGREDIENTES BRASIL";
+        String descricao = "Descrição de teste automatizado.";
 
         loginFlows.efetuarLogin(usuario, senha);
         mainFlows.navegarParaAlmoxarifadoLocalizacao();
@@ -32,9 +33,11 @@ public class AlmoxLocaTests extends TestBase {
         almoxaLocaPage.clicarAplicarFiltro();
         almoxaLocaPage.clicarAdicionar();
         almoxaLocaPage.adicionarCodigo();
+        almoxaLocaPage.adicionarDescricao(descricao);
+        almoxaLocaPage.clicarSalvar();
 
         Assert.assertTrue(almoxaLocaPage.retornarFilialFiltrada().endsWith(unidade));
-
+        Assert.assertEquals(almoxaLocaPage.confirmacaoCadastroSucesso(), almoxaLocaPage.numeroGerado());
     }
 }
 

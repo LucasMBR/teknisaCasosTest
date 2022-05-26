@@ -30,7 +30,7 @@ public class LancamentoSaidaPage extends PageBase {
 
     By unidadeFieldAux = By.id("NMFILIAL");
     By unidadeField = By.xpath("//*[@id='NMFILIAL']//input");
-    By operacaoFieldAux= By.xpath("//*[@class='zh-cabecalho ng-valid-maxlength']//*[@id='NMTIPOOPER']");
+    By operacaoFieldAux = By.xpath("//*[@class='zh-cabecalho ng-valid-maxlength']//*[@id='NMTIPOOPER']");
     By operacaoField = By.xpath("//div//span[text() = '01 | NF Venda']");
     By modeloDocumentoFiscalFIeldAux = By.id("DSMODDOCFISC");
     By modeloDocumentoFiscalFIeld = By.xpath("//*[@id='DSMODDOCFISC']//input");
@@ -52,7 +52,7 @@ public class LancamentoSaidaPage extends PageBase {
     By produtoSearchBtn = By.xpath("//div[@id='NMPRODUTO']//span");
     By produtoSearchField = By.xpath("//div[@class='floating-card floating-filter-card no-filter-selection']//input[@ng-if='!isSearchFieldSelect(searchField)']");
     By produtoSelect = By.xpath("//div[@class='tr cell1']//div[@data-zh-field-name='NMPRODUTO']//span");
-    By loteProdutoSearchBtn = By.xpath("//div[@id='NRLOTEESTQ']//span") ;
+    By loteProdutoSearchBtn = By.xpath("//div[@id='NRLOTEESTQ']//span");
     By loteProdutoAtualizarBtn = By.xpath("//div[@class='control-menu']//li[@class='float-action refresh-action']//span");
     By loteProdutoSelect = By.xpath("//div[@class='tr cell1']//div[@data-zh-field-name='NRLOTEESTQ']//span");
     By confirmarProdutoBtn = By.xpath("//div[@id='footer']//span[text() = 'Confirmar']");
@@ -104,26 +104,30 @@ public class LancamentoSaidaPage extends PageBase {
         sendKeys(filtroOperacao, operacao);
     }*/
 
-    public void clicarAplicarFiltro(){
+    public void clicarAplicarFiltro() {
         click(filtroAplicarFiltro);
     }
-    public void clicarFecharFiltro(){
+
+    public void clicarFecharFiltro() {
         click(filtroFecharFiltro);
     }
-    public void clicarLimparFiltro(){
+
+    public void clicarLimparFiltro() {
         click(filtroLimparFiltro);
     }
-    public void clicarAdicionarLancamento(){
+
+    public void clicarAdicionarLancamento() {
         waitForVisibilityOfElementLocated(loadingWait);
         waitForInvisibilityOfElementLocated(loadingWait);
         click(adicionarLancamento);
     }
 
-    public void preencherUnidade(String unidade){
+    public void preencherUnidade(String unidade) {
         click(unidadeFieldAux);
-        sendKeys(unidadeField,unidade);
+        sendKeys(unidadeField, unidade);
     }
-    public void preencherOperacao(String operacao){
+
+    public void preencherOperacao(String operacao) {
         //clickWithoutClickable(operacaoFieldAux);
         //System.out.println(driver.getPageSource());
         //driver.findElement(operacaoFieldAux).click();
@@ -135,17 +139,21 @@ public class LancamentoSaidaPage extends PageBase {
         //expandShadowRootElement(operacaoFieldAux).findElement(By.xpath(""))
         //System.out.println(getText(operacaoFieldAux));
     }
-    public void preencherDocumentoFiscal(String documentoFiscal){
+
+    public void preencherDocumentoFiscal(String documentoFiscal) {
         click(modeloDocumentoFiscalFIeldAux);
-        sendKeys(modeloDocumentoFiscalFIeld,documentoFiscal);
+        sendKeys(modeloDocumentoFiscalFIeld, documentoFiscal);
     }
-    public void clicarPesquisaDestinatario(){
+
+    public void clicarPesquisaDestinatario() {
         click(destinarioSearchBtn);
     }
-    public void preencherDestinatario(String destinatario){
-        sendKeys(destinarioSearchField,destinatario);
+
+    public void preencherDestinatario(String destinatario) {
+        sendKeys(destinarioSearchField, destinatario);
     }
-    public void clicarEscolherDestinatario(){
+
+    public void clicarEscolherDestinatario() {
         try {
             Thread.sleep(8000);
         } catch (InterruptedException e) {
@@ -153,7 +161,8 @@ public class LancamentoSaidaPage extends PageBase {
         }
         click(destinatarioSelect);
     }
-    public void clicarPesquisaSerie(){
+
+    public void clicarPesquisaSerie() {
         click(serieSearchBtn);
         try {
             Thread.sleep(8000);
@@ -162,74 +171,89 @@ public class LancamentoSaidaPage extends PageBase {
         }
         click(serieSearchBtn);
     }
-    public void preencherSerie(String serie){
+
+    public void preencherSerie(String serie) {
         click(serieSearchField);
-        sendKeys(serieSearchField,serie);
+        sendKeys(serieSearchField, serie);
     }
-    public void clicarEscolherSerie(String serie){
+
+    public void clicarEscolherSerie(String serie) {
         try {
             Thread.sleep(8000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         //click(serieSelect);
-        clickWithText(serieSelect,serie);
-    }
-    public void preencherDataSaida(String data){
-        sendKeys(dataSaidaField,data);
-    }
-    public void preencherNumeroNF(String numeroNF){
-        sendKeys(numeroNFField,numeroNF);
+        clickWithText(serieSelect, serie);
     }
 
-    public void salvarLancamento(){
+    public void preencherDataSaida(String data) {
+        sendKeys(dataSaidaField, data);
+    }
+
+    public void preencherNumeroNF(String numeroNF) {
+        sendKeys(numeroNFField, numeroNF);
+    }
+
+    public void salvarLancamento() {
         click(salvarLancamentoBtn);
     }
 
-    public void clicarMenuProdutos(){
+    public void clicarMenuProdutos() {
         waitForVisibilityOfElementLocated(loadingWait);
         waitForInvisibilityOfElementLocated(loadingWait);
         click(produtosMenu);
     }
-    public void clicarAdicionarProduto(){
+
+    public void clicarAdicionarProduto() {
         click(adicionarProdutoBtn);
     }
-    public void clicarPesquisaProduto(){
+
+    public void clicarPesquisaProduto() {
         click(produtoSearchBtn);
     }
-    public void preencherNomeProduto(String nomeProduto){
-        sendKeys(produtoSearchField,nomeProduto);
+
+    public void preencherNomeProduto(String nomeProduto) {
+        sendKeys(produtoSearchField, nomeProduto);
     }
-    public void clicarEscolherProduto(){
+
+    public void clicarEscolherProduto() {
         click(produtoSelect);
     }
-    public void clicarPesquisaLoteProduto(){
+
+    public void clicarPesquisaLoteProduto() {
         click(loteProdutoSearchBtn);
     }
-    public void clicarEscolherLoteProduto(){
+
+    public void clicarEscolherLoteProduto() {
         click(loteProdutoAtualizarBtn);
         click(loteProdutoSelect);
     }
-    public void clicarConfirmarProduto(){
+
+    public void clicarConfirmarProduto() {
         click(confirmarProdutoBtn);
     }
-    public void preencherQuantidadeProduto(String quantidadeProduto){
+
+    public void preencherQuantidadeProduto(String quantidadeProduto) {
         waitForVisibilityOfElementLocated(loadingWait);
         waitForInvisibilityOfElementLocated(loadingWait);
         click(quantidadeProdutoField);
-        sendKeys(quantidadeProdutoField,quantidadeProduto);
+        sendKeys(quantidadeProdutoField, quantidadeProduto);
     }
-    public void clicarSalvarProduto(){
+
+    public void clicarSalvarProduto() {
         click(salvarProdutoBtn);
     }
 
-    public void clicarFecharLancamento(){
+    public void clicarFecharLancamento() {
         click(fecharLancamentoBtn);
     }
-    public void clicarConfirmarFecharLancamento(){
+
+    public void clicarConfirmarFecharLancamento() {
         click(fecharLancamentoConfirmarBtn);
     }
-    public String retornarStatusLancamento(){
+
+    public String retornarStatusLancamento() {
         return getText(statusLancamento);
     }
 

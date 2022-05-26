@@ -3,16 +3,13 @@ package com.javaseleniumtemplate.bases;
 import com.javaseleniumtemplate.GlobalParameters;
 import com.javaseleniumtemplate.utils.DriverFactory;
 import com.javaseleniumtemplate.utils.ExtentReportUtils;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.http.params.HttpParams;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 import org.apache.commons.lang3.time.StopWatch;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
-import java.util.function.Predicate;
 
 public class PageBase {
     //Variaveis globlais
@@ -229,9 +226,10 @@ public class PageBase {
         }
     }
 
-    protected void sendKeys(By locator, String text){
+    protected HttpParams sendKeys(By locator, String text){
         waitForElement(locator).sendKeys(text);
         ExtentReportUtils.addTestInfo(3, "PARAMETER: " + text);
+        return null;
     }
 
     protected void sendKeysWithoutWaitVisible(By locator, String text){
