@@ -2,6 +2,7 @@ package com.javaseleniumtemplate.pages;
 
 import com.javaseleniumtemplate.bases.PageBase;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 
 import java.util.Random;
 
@@ -70,6 +71,7 @@ public class AlmoxLocaPage extends PageBase {
     }
 
     public int confirmacaoCadastroSucesso() {
+        ScrollToElementJavaScript(confirmacaoCadastro);
         waitForVisibilityOfElementLocated(confirmacaoCadastro);
         String text = getText(confirmacaoCadastro);
         return Integer.parseInt(text);

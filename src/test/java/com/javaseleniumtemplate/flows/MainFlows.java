@@ -24,4 +24,12 @@ public class MainFlows {
         mainPage.clicarEmEstoque();
         mainPage.clicarEmMenuAlmoxarifadoLocalizacao();
     }
+
+    public void navegarParaTipoDeRetiradaPage(){
+        mainPage.clicarEmMenuPrincipal();
+        mainPage.clicarEmParametrizacao();
+        mainPage.clicarEmEstoque();
+        mainPage.clicarEmMenuTipoRetirada();
+    }
+
 }

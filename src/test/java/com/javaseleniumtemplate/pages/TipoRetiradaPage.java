@@ -20,6 +20,51 @@ public class TipoRetiradaPage extends PageBase {
 
     By btnSalvar = By.xpath("//*[@id='footer']/div[3]");
 
-    By confirmacaoCadastro = By.xpath("//span[text() = '" + numero + "']");
+    By confirmacaoCadastroSucesso = By.xpath("//span[text() = '" + numero + "']");
 
+    By loadingWait = By.xpath("//*[@class='zh-background-loading ng-scope']//span[@class='zh-loading-icon']");
+
+    public void preencherFiltroUnidade(){
+        click(filtroAplicarFiltro);
+    }
+
+    public void clicarAdicionar(){
+        waitForVisibilityOfElementLocated(btnAdicionar);
+        click(btnAdicionar);
+    }
+
+    public void adicionarCodigo(){
+        waitForInvisibilityOfElementLocated(loadingWait); //verificar possibilidade de colocar método no testbase.
+        click(campoCodigo);
+        sendKeys(campoCodigo, String.valueOf(numero));
+    }
+
+    public void adicionarNome(String descricao){
+        waitForInvisibilityOfElementLocated(loadingWait);
+        click(campoNome);
+        sendKeys(campoNome, descricao);
+    }
+
+    public void selecionarTpMovi(){
+        waitForInvisibilityOfElementLocated(loadingWait);
+        click(campoTpMovi);
+        waitForVisibilityOfElementLocated(valorCampoTpMovi);
+        click(valorCampoTpMovi);
+    }
+
+    public void clicarSalvar(){
+        waitForInvisibilityOfElementLocated(loadingWait);
+        click(btnSalvar);
+    }
+
+    public int confirmacaoCadastroSucesso() {
+        ScrollToElementJavaScript(confirmacaoCadastroSucesso);
+        waitForVisibilityOfElementLocated(confirmacaoCadastroSucesso);
+        String text = getText(confirmacaoCadastroSucesso);
+        return Integer.parseInt(text);
+    }
+
+    public int numeroGerado() {
+        return numero;
+    }
 }
