@@ -13,12 +13,16 @@ public class MainPage extends PageBase {
     By displayPagamentosVencidos = By.xpath("//span[text() = 'Pagamentos - Vencidos']");
     By menuDocumentosFiscais = By.xpath("//span[text() = 'Documentos Fiscais']");
     By menuParametrizacao = By.xpath("//span[text() = 'Parametrização']");
+    By menuEstoquePrimario = By.xpath("//span[text() = 'Estoque']");
     By menuDocumentosFiscais_Saidas = By.xpath("//span[text() = 'Saídas']");
     By menuDocumentosFiscais_Saidas_Lancamentos = By.xpath("//span[text() = 'Lançamentos']");
     By menuDocumentosFiscais_Saidas_Lancamentos_LancamentoDeSaida = By.xpath("//span[text() = 'Lançamento de Saída']");
     By menuAlmoxarifadoLocalizacao = By.xpath("//span[text() = 'Almoxarifado/Localização']");
     By menuTipoRetirada = By.xpath("//span[text() = 'Tipo de Retirada']");
-    By menuEstoque = By.xpath("//li[8]//span[text() = 'Estoque'] ");
+    By menuEstoqueMinimoProdutos = By.xpath("//span[text() = 'Estoque Mínimo de Produtos']");
+    By menuEstoque = By.xpath("//li[8]//span[text() = 'Estoque']");
+    By menuRelatorios = By.xpath("//span[text() = 'Relatórios']");
+    By menuPosicaoEstoque = By.xpath("//span[text() = 'Irregularidades de Estoque']/../../../li[1]/span/span[2]");
 
     By loadingWait = By.xpath("//*[@class='zh-background-loading ng-scope']//span[@class='zh-loading-icon']");
 
@@ -61,8 +65,24 @@ public class MainPage extends PageBase {
         click(menuTipoRetirada);
     }
 
+    public void clicarEmMenuEstoqueMinimoProduto() {
+        click(menuEstoqueMinimoProdutos);
+    }
+
     public void clicarEmParametrizacao() {
         click(menuParametrizacao);
+    }
+
+    public void clicarEmMenuEstoque() {
+        click(menuEstoquePrimario);
+    }
+
+    public void clicarEmRelatorios() {
+        click(menuRelatorios);
+    }
+
+    public void clicarEmPosicaoEstoque() {
+        click(menuPosicaoEstoque);
     }
 
     public void clicarEmEstoque() {

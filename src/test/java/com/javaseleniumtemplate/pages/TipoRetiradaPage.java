@@ -10,12 +10,12 @@ public class TipoRetiradaPage extends PageBase {
     Random random = new Random();
     int numero = random.nextInt(100);
 
-    By filtroAplicarFiltro = By.xpath("/html/body/span/section/section/div[2]/section[4]/span/section/div/div/div[3]/ul/li/a/span");
+    By filtroAplicarFiltro = By.xpath("//section/div/div/div[3]/ul/li/a//span[text() = 'Aplicar filtro'][1]");
 
     By btnAdicionar = By.xpath("//*[@class='zh-test-box']");
     By campoCodigo = By.xpath("//input[@id='CDTIPORETI']");
     By campoNome = By.xpath("//input[@id='NMTIPORETI']");
-    By campoTpMovi = By.xpath("/html/body/span/section/section/div[2]/section[3]/div/div[4]/section/section/div/section/div/form/section/div/div[3]/div[2]/div/div[2]");
+    By campoTpMovi = By.xpath("//div[3]/div[2]/div/div[2]//span[text() = 'Ambos']");
     By valorCampoTpMovi = By.xpath("//*[@class='list zh-new-select-list']/li["+1+"]");
 
     By btnSalvar = By.xpath("//*[@id='footer']/div[3]");

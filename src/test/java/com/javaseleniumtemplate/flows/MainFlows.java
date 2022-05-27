@@ -32,4 +32,19 @@ public class MainFlows {
         mainPage.clicarEmMenuTipoRetirada();
     }
 
+    public void navegarParaPosicaoEstoque(){
+        mainPage.clicarEmMenuPrincipal();
+        mainPage.clicarEmMenuEstoque();
+        mainPage.clicarEmRelatorios();
+        mainPage.clicarEmPosicaoEstoque();
+
+    }
+
+    public void navegarParaEstoqueMinimoDeProduto(){
+        mainPage.clicarEmMenuPrincipal();
+        mainPage.clicarEmParametrizacao();
+        mainPage.clicarEmEstoque();
+        mainPage.clicarEmMenuEstoqueMinimoProduto();
+    }
+
 }
