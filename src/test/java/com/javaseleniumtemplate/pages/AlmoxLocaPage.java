@@ -32,7 +32,7 @@ public class AlmoxLocaPage extends PageBase {
     //Localizador para garantir que cadastro foi realizado utilizando o mesmo numero aleatório gerado para a tela.
     By confirmacaoCadastro = By.xpath("//span[text() = '" + numero + "']");
 
-    public void preencherFiltroUnidade(String unidade) {//Verificar possibilidade de redução para aplicar filtro.
+    public void preencherFiltroUnidade() {//Verificar possibilidade de redução para aplicar filtro.
         clickWithoutClickable(filtroUnidade);
         click(filtroUnidadeAux);
         click(selecionandoUnidade);

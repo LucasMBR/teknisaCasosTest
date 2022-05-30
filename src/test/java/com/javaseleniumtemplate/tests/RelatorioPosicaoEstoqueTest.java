@@ -20,8 +20,18 @@ public class RelatorioPosicaoEstoqueTest extends TestBase {
         relatorioPosicaoEstoquePage = new RelatorioPosicaoEstoquePage();
         String usuario = "lucas.leal@teknisa.com";
         String senha = "Teknisa1.";
+        String almoxarifado = "FABRICA PRODUCAO";
+        String prodInicial = "Mercadoria para revenda";
+        String prodFinal= "SERVIÇOS DE TERCEIROS, DESPESAS E REEMBOLSOS";
 
         loginFlows.efetuarLogin(usuario, senha);
         mainFlows.navegarParaPosicaoEstoque();
+
+        relatorioPosicaoEstoquePage.preencherAlmoxarifado(almoxarifado);
+        relatorioPosicaoEstoquePage.preencherNivelTotalizacao();
+        relatorioPosicaoEstoquePage.preencherProdutoInicial(prodInicial);
+        relatorioPosicaoEstoquePage.preencherProdutoFinal(prodFinal);
+        relatorioPosicaoEstoquePage.clicarGerarRelatorioGrid();
+
     }
 }

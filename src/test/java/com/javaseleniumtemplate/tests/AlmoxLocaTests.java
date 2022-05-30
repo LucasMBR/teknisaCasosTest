@@ -30,7 +30,7 @@ public class AlmoxLocaTests extends TestBase {
         mainFlows.navegarParaAlmoxarifadoLocalizacao();
 
         //Preenchendo e aplicando Filtro
-        almoxaLocaPage.preencherFiltroUnidade(unidade);
+        almoxaLocaPage.preencherFiltroUnidade();
         almoxaLocaPage.clicarAplicarFiltro();
 
         //Realizando rotina
