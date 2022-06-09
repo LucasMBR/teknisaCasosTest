@@ -23,12 +23,12 @@ public class RelatorioPosicaoEstoqueTest extends TestBase {
         String almoxarifado = "FABRICA PRODUCAO";
         String prodInicial = "Mercadoria para revenda";
         String prodFinal= "SERVIÇOS DE TERCEIROS, DESPESAS E REEMBOLSOS";
-
+        String nivel = "1";
         loginFlows.efetuarLogin(usuario, senha);
         mainFlows.navegarParaPosicaoEstoque();
 
         relatorioPosicaoEstoquePage.preencherAlmoxarifado(almoxarifado);
-        relatorioPosicaoEstoquePage.preencherNivelTotalizacao();
+        relatorioPosicaoEstoquePage.preencherNivelTotalizacao(nivel);
         relatorioPosicaoEstoquePage.preencherProdutoInicial(prodInicial);
         relatorioPosicaoEstoquePage.preencherProdutoFinal(prodFinal);
         relatorioPosicaoEstoquePage.clicarGerarRelatorioGrid();

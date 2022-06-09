@@ -12,14 +12,14 @@ public class RelatorioPosicaoEstoquePage extends PageBase {
     //By opcaoAlmoxarifado = By.xpath("//span[text() = 'FABRICA PRODUCAO']");
     //By campoTipoDeCusto = By.xpath();
     By campoNivelTotalizacao = By.xpath("//*[@data-zh-id='66119073720788263272879']/../../div[1]/div/div[2]");
-    By opcaoNivelTotalizacao = By.xpath("//*[@class='list zh-new-select-list']/../../../../div[1]/div[1]/select[@name='NVTOT']/option[1]");
+    By opcaoNivelTotalizacao = By.xpath("//*[@class='list zh-new-select-list']/../../../../div[1]/div[1]/div[2]//li[text() = '1']");
     //By campoOrdenarPorNome = By.xpath();
-    By campoProdutoInicial = By.xpath("//*[@id='NMPRODUTOINI']");
+    By campoProdutoInicial = By.xpath("//*[@id='NMPRODUTOINI']//input");
     //By opcaoCampoProdutoInicial = By.xpath("//span[text() = 'Mercadoria para revenda']");
-    By campoProdutoFinal = By.xpath("//*[@id='NMPRODUTOFIN']");
+    By campoProdutoFinal = By.xpath("//*[@id='NMPRODUTOFIN']//input");
     //By opcaoCampoProdutoFinal = By.xpath("//span[text() = 'SERVIÇOS DE TERCEIROS, DESPESAS E REEMBOLSOS']");
 
-    By btnEmGrid = By.xpath("//span[text()='Em Grid']");
+    By btnEmGrid = By.xpath("//span[text()='Em Grid']/../div[1]");
 
     By loadingWait = By.xpath("//*[@class='zh-background-loading ng-scope']//span[@class='zh-loading-icon']");
 
@@ -29,11 +29,11 @@ public class RelatorioPosicaoEstoquePage extends PageBase {
         sendKeys(campoAlmoxarifado,almoxarifado);
     }
 
-    public void preencherNivelTotalizacao() {
-        //waitForInvisibilityOfElementLocated(loadingWait);
-        click(campoNivelTotalizacao);
+    public void preencherNivelTotalizacao(String nivel) {
         waitForInvisibilityOfElementLocated(loadingWait);
-        click(opcaoNivelTotalizacao); //tentando pegar o xpath certo //*[@class='list zh-new-select-list']/../../../../div[1]
+        click(campoNivelTotalizacao);
+        //clickWithoutClickable(opcaoNivelTotalizacao);
+        clickWithText(opcaoNivelTotalizacao,nivel); //tentando pegar o xpath certo //*[@class='list zh-new-select-list']/../../../../div[1]
     }
 
     public void preencherProdutoInicial(String prodInicial) {
@@ -49,7 +49,7 @@ public class RelatorioPosicaoEstoquePage extends PageBase {
     }
 
     public void clicarGerarRelatorioGrid() {
-        //waitForInvisibilityOfElementLocated(loadingWait);
+        waitForInvisibilityOfElementLocated(loadingWait);
         click(btnEmGrid);
     }
 
